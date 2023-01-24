@@ -1,7 +1,7 @@
 require './math_game.rb'
-require './turns.rb'
-require './players.rb'
-require './questions.rb'
+require './turn.rb'
+require './player.rb'
+require './question.rb'
 
 # initializes a new game
 math = Math_game.new
