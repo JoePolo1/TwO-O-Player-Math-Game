@@ -24,7 +24,7 @@ class Math_game
     # Ruby while style loop
     while @player_one.total_lives > 0 && @player_two.total_lives > 0 do
       turn = Turn.new(@current_player, @not_current_player)
-      
+
       # initiates the first turn
       turn.take_turn
 
@@ -41,6 +41,7 @@ class Math_game
       # End game
       if @current_player.total_lives == 0
         puts "#{@not_current_player.player_name} wins with a score of #{@not_current_player.total_lives}/3"
+        puts "----- GAME OVER -----"
       end
       # swaps players
       switch_turn
