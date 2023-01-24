@@ -21,32 +21,26 @@ class Math_game
     puts "----- NEW GAME -----"
     puts "#{@current_player.player_name} goes first!"
 
-    turn = Turn.new
+    turn = Turn.new(@not_current_player)
     turn.take_turn(@current_player, @not_current_player)
+
+
+    if turn.round_result?
+      puts "round_result is returning true"
+    end
   end
 
 
 
   # Switch to new player logic NOT TESTED YET
   def switch_turn
-    @switch_turn = if @current_player == @player_one
+    if @current_player == @player_one
       @current_player = @player_two
+      @not_current_player = @player_one
     else @current_player = @player_one
+      @not_current_player = @player_two
     end
   end
 
 end
 
-# puts @current_player
-# turn = Turn.new
-# Turn.switch_turn
-# puts @current_player
-
-# initializes a new game and calls test print
-# math = Math_game.new
-# math.test_print
-
-# MORE TEST CODE. THIS SHOULD go within the class definition itself ideally. 
-# question = Question.new
-# puts question.question_string
-# puts question.result
