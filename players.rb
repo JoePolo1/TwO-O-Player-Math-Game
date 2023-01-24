@@ -1,7 +1,6 @@
 class Player
   attr_reader :player_name, :total_lives
 
-
   def initialize(username)
     @player_name = username
     @total_lives = 3

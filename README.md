@@ -20,13 +20,10 @@
 - Holds the state of the current_player for the main game loop to call upon.
 - current_player has attr_reader so it can be read by Question Class
 
-<!-- - Calls the method within the Question class that prints the question to terminal. 
-- Takes the gets.chomp input of the current_player
-- Compares the input against the result of Question class' method -->
+<!-- moving this to main game logic  -->
+<!-- - switch_turn method is something that changes the current_player to the other player initiating a new turn. -->
 
-- switch_turn method is something that changes the current_player to the other player initiating a new turn.
-<!-- - switch_turn is writable, we want to be able to call it from the main game loop script, so it has an attr_writer attached to the class. -->
-- switch_turn needs to only be called
+- switch_turn needs to only be called by Math Game class on a new turn
 - Along with the player change, The following is puts to terminal when switch_turn is run:
 ```----- NEW TURN -----```
 
@@ -39,6 +36,7 @@
 - Calls the method within the Question class that prints the question to terminal. 
 - Takes the gets.chomp input of the current_player
 - Compares the input against the result of Question class' method
+- switch_turn method is something that changes the current_player to the other player initiating a new turn.
 
 - Until the result from input matches the result from the Question class, current_player does not lose a life
 - If the result from input does not match the result from the Question class, current_player loses a life through calling the life_loss method from within the Player class

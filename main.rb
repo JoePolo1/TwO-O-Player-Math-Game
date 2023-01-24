@@ -5,6 +5,6 @@ require './questions.rb'
 
 # initializes a new game
 math = Math_game.new
-
+math.new_game
 # runs test print method from within math_game file
 # math.test_print
